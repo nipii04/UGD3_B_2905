@@ -1,0 +1,59 @@
+* {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    color: #ffffff;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url("gif.gif");
+    background-size: cover;
+}
+
+.signin-form {
+    margin: 0 auto;
+    background-color: #000000;
+    margin-top: 100px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 10px 25px rgba(212, 0, 255, 0.3);
+    width: 300px;
+    transition: background 0.3s ease-in-out;
+}
+
+h5 {
+    text-align: left;
+    margin-left: 10px;
+    margin-bottom: auto;
+}
+
+button {
+    background-color: #6f00ff;
+    color: #fff;
+    border: none;
+    margin-right: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+input {
+    text-align: left;
+    width: 90%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 2px solid #6f00ff;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #ff0095;
+}
+hr {
+    border : none;
+    border-top: 3px solid #6f00ff;
+}
