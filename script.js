@@ -11,6 +11,12 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         if (usn == "" || pass == "") {
+            let errorSound = new Audio("bomb.mp3"); 
+            
+            errorSound.play().catch(function(error) {
+                console.log("Gagal memutar suara: ", error);
+            });
+
             let msgError = document.createElement("p");
             msgError.id = "msgError";
             msgError.style.color = "red";
