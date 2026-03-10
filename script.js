@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
             errorBefore.remove();
         }
 
-        if (usn == "" || pass == "") {
+        if (usn == "" || usn != "kent" || pass == "" || pass.length < 8 || pass.length > 16) {
             let errorSound = new Audio("bomb.mp3"); 
             
             errorSound.play().catch(function(error) {
@@ -23,7 +23,17 @@ document.addEventListener("DOMContentLoaded", function () {
             msgError.style.fontSize = "12px";
             msgError.style.marginLeft = "5px";
             msgError.style.textAlign = "left";
-            msgError.textContent = "Username atau Password Tidak Boleh Kosong";
+
+            if (usn == "") {
+                msgError.textContent = "Username harus diisi";
+            } else if (usn != "kent") {
+                msgError.textContent = "Username salah";
+            } else if (pass == "") {
+                msgError.textContent = "Password tidak boleh kosong";
+            } else if (pass.length < 8 || pass.length > 16) {
+                msgError.textContent = "Password minimal 8 karakter, maksimal 16 karakter";
+            }
+
             position.after(msgError);
         } else {
             window.open("https://www.instagram.com/kentson.thio?igsh=MTdsdml2aHd3amozdA==");
